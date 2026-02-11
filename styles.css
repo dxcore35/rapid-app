@@ -1,13 +1,13 @@
 :root {
-  --bg-1: #0f1117;
-  --bg-2: #1d222f;
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.14);
-  --text: #f4f6ff;
-  --text-dim: #d2d8ec;
-  --accent: #ff6b5f;
-  --accent-2: #6ad7ff;
-  --ring: #ffd7aa;
+  --bg-1: #040404;
+  --bg-2: #0a0a0a;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --text: #f5f5f5;
+  --text-dim: #d4d4d4;
+  --accent: #ef4b3b;
+  --accent-2: #ef4b3b;
+  --ring: #ff8d82;
 }
 
 * {
@@ -25,8 +25,8 @@ body {
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 500px at 85% -10%, rgba(106, 215, 255, 0.16), transparent 55%),
-    radial-gradient(900px 500px at -10% 15%, rgba(255, 107, 95, 0.18), transparent 55%),
+    radial-gradient(960px 440px at 85% -10%, rgba(239, 75, 59, 0.12), transparent 58%),
+    radial-gradient(760px 520px at 12% 18%, rgba(239, 75, 59, 0.08), transparent 62%),
     linear-gradient(165deg, var(--bg-1), var(--bg-2));
   line-height: 1.65;
 }
@@ -92,7 +92,7 @@ nav a {
 
 nav a:hover,
 a:hover {
-  color: #9ee8ff;
+  color: #ff8d82;
 }
 
 .hero {
@@ -110,7 +110,7 @@ a:hover {
   font-weight: 700;
   font-size: 0.82rem;
   margin: 0 0 0.85rem;
-  color: #ffd2cc;
+  color: #ffb3aa;
 }
 
 h1,
@@ -152,8 +152,8 @@ h3 {
 .button {
   display: inline-block;
   text-decoration: none;
-  background: linear-gradient(135deg, var(--accent), #ff8468);
-  color: #111;
+  background: linear-gradient(135deg, var(--accent), #ff6c56);
+  color: #160d0a;
   font-weight: 700;
   padding: 0.72rem 1rem;
   border-radius: 12px;
@@ -173,6 +173,21 @@ h3 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.hero-shot {
+  padding: 0.9rem 0 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-shot img {
+  display: block;
+  width: min(100%, 1200px);
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(239, 75, 59, 0.65);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.52);
+}
+
 .card {
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -183,7 +198,7 @@ h3 {
 
 .card-wide {
   grid-column: span 12;
-  background: linear-gradient(145deg, rgba(255, 107, 95, 0.2), rgba(106, 215, 255, 0.06));
+  background: linear-gradient(145deg, rgba(239, 75, 59, 0.22), rgba(239, 75, 59, 0.05));
 }
 
 .section-grid .card:nth-child(2),
@@ -220,7 +235,14 @@ li + li {
 }
 
 .legal-card {
-  margin-bottom: 2.3rem;
+  margin: 0 auto 2.3rem;
+  max-width: 760px;
+  text-align: center;
+}
+
+.legal-card p {
+  max-width: 64ch;
+  margin-inline: auto;
 }
 
 .site-footer {
@@ -229,11 +251,11 @@ li + li {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.8rem;
   padding: 1rem 0 1.6rem;
-  color: #d4dbf2;
+  color: #c8c8c8;
 }
 
 :focus-visible {
