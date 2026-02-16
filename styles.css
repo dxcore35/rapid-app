@@ -234,6 +234,13 @@ li + li {
   padding-bottom: 2rem;
 }
 
+.support-email {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  word-break: break-word;
+}
+
 .legal-card {
   margin: 0 auto 2.3rem;
   max-width: 760px;
