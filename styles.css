@@ -22,6 +22,8 @@ body {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   background:
@@ -29,6 +31,10 @@ body {
     radial-gradient(760px 520px at 12% 18%, rgba(239, 75, 59, 0.08), transparent 62%),
     linear-gradient(165deg, var(--bg-1), var(--bg-2));
   line-height: 1.65;
+}
+
+main {
+  flex: 1;
 }
 
 .skip-link {
@@ -234,7 +240,12 @@ li + li {
   padding-bottom: 2rem;
 }
 
-.support-grid .card {
+.section-grid.support-grid .card {
+  grid-column: span 12;
+}
+
+.section-grid.support-grid .card:nth-child(2),
+.section-grid.support-grid .card:nth-child(3) {
   grid-column: span 12;
 }
 
